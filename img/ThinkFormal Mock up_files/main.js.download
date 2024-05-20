@@ -1,0 +1,85 @@
+!(function () {
+  const CLOSE_MESSAGE = "fireawai.close";
+  const OPEN_MESSAGE = "fireawai.open";
+  const INIT_MESSAGE = "fireawai.init";
+  const scriptEl = document.currentScript;
+
+  let chatFrame = null;
+
+  const mountButton = () => {
+    const url = new URL(
+      "/widget/button/?nc=" + new Date().getTime(),
+      scriptEl.src
+    );
+
+    const addParam = (name) => {
+      if (scriptEl.dataset[name]) {
+        url.searchParams.append(name, scriptEl.dataset[name]);
+      }
+    };
+
+    addParam("buttonBackgroundColor");
+
+    const iframe = document.createElement("iframe");
+    iframe.setAttribute("frameborder", "0");
+    iframe.src = url.toString();
+    iframe.setAttribute(
+      "style",
+      "position: fixed; bottom: 16px; right: 16px; width: 56px; height: 56px; z-index: 999; border-radius: 50%;"
+    );
+    document.body.appendChild(iframe);
+  };
+
+  const mountChatFrame = () => {
+    const url = new URL(
+      "/widget/chat/?nc=" + new Date().getTime(),
+      scriptEl.src
+    );
+
+    const addParam = (name) => {
+      if (scriptEl.dataset[name]) {
+        url.searchParams.append(name, scriptEl.dataset[name]);
+      }
+    };
+
+    addParam("apiToken");
+    addParam("chatbotId");
+    addParam("headerBackgroundColor");
+    addParam("headerBorderColor");
+    addParam("headerTextColor");
+    addParam("headerText");
+    addParam("headerFontSize");
+    addParam("headerFontWeight");
+    addParam("closeButtonColor");
+    addParam("logo");
+    addParam("buttonColot");
+    addParam("mode");
+    addParam("avatarUrl");
+
+    const iframe = document.createElement("iframe");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allow", "clipboard-write");
+    iframe.src = url.toString();
+    iframe.setAttribute(
+      "style",
+      "position: fixed; display: none; bottom: 80px; right: 16px; width: 60vw; max-width: 500px; height: 70vh; z-index: 999; border-radius: 8px;" +
+        "box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px"
+    );
+
+    document.body.appendChild(iframe);
+    return iframe;
+  };
+
+  window.addEventListener("message", (event) => {
+    if (event.data === OPEN_MESSAGE) {
+      chatFrame.style.display =
+        chatFrame.style.display === "block" ? "none" : "block";
+      chatFrame.contentWindow.postMessage(INIT_MESSAGE, "*");
+    } else if (event.data === CLOSE_MESSAGE && chatFrame) {
+      chatFrame.style.display = "none";
+    }
+  });
+
+  chatFrame = mountChatFrame();
+  mountButton();
+})();
