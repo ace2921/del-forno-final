@@ -12,7 +12,7 @@
 }
 
 .banner .div {
-    border: 4px solid #000;
+    /* border: 4px solid #000; */
     position: fixed;
     z-index: 10000000000000;
     width: 100%;
@@ -65,7 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ff0303e3;
+    /* border: 2px solid #ff0303e3; */
     width: 100%;
     /* height: 90vh; */
     position: relative;
@@ -328,7 +328,7 @@
 }
 
 .maincontainer {
-    border: 5px solid darkgreen;
+    /* border: 5px solid darkgreen; */
     padding: 0.16px;
     /* display: flex;
     align-items: center;
@@ -337,58 +337,58 @@
 
 
 .container {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     /* height: 56vh; */
     display: flex;
 }
 
 .container2 {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     /* height: 56vh; */
     display: flex;
 }
 
 .container3 {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     /* height: 80vh; */
     display: flex;
 }
 
 .container4 {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     /* height: 80vh; */
-    display: flex;
+    /* display: flex; */
 }
 
 .container .text {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* height: 56vh; */
     width: 60%;
     padding: 60px;
 }
 
 .container .video {
-    border: 2px solid goldenrod;
+    /* border: 2px solid goldenrod; */
     /* height: 56vh; */
     width: 40%;
 
 }
 
 .container2 .video {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     /* height: 56vh; */
     width: 40%;
 }
 
 .container2 .text {
-    border: 2px solid darkred;
+    /* border: 2px solid darkred; */
     /* height: 56vh; */
     width: 60%;
     padding: 60px;
 }
 
 .container3 .img {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     /* height: 80vh; */
     width: 40%;
     display: flex;
@@ -397,21 +397,21 @@
 }
 
 .container3 .text {
-    border: 2px solid palevioletred;
+    /* border: 2px solid palevioletred; */
     /* height: 80vh; */
     width: 60%;
     padding-left: 60px;
 }
 
 .container4 .text {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     /* height: 80vh; */
     width: 60%;
     padding-left: 60px;
 }
 
 .container4 .img {
-    border: 2px solid cyan;
+    /* border: 2px solid cyan; */
     /* height: 80vh; */
     width: 40%;
     display: flex;
@@ -425,13 +425,13 @@ span {
 
 hr {
     width: 10%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 button {
     width: 20%;
     /* height: 60px; */
-    background-color: #fff;
+    /* background-color: #fff; */
     border: 2px solid red;
     color: red;
     font-size: 16px;
@@ -450,7 +450,7 @@ span a {
 }
 
 .menu {
-    border: 2px solid darkblue;
+    /* border: 2px solid darkblue; */
     height: 80vh;
     background-image: url(./img/index-specials.jpg);
     /* display: flex; */
@@ -482,7 +482,7 @@ span a {
 
 .append-buttons a {
     display: inline-block;
-    border: 1px solid #007aff;
+    /* border: 1px solid #007aff; */
     color: #007aff;
     text-decoration: none;
     padding: 4px 10px;
@@ -492,7 +492,7 @@ span a {
 }
 
 .info {
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     height: 20vh;
     background-color: #151515;
     display: flex;
@@ -520,7 +520,7 @@ span a {
 }
 
 .menu hr {
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
 }
 .sticky{
     position: fixed;
@@ -533,7 +533,7 @@ span a {
 }
 .swiper-button-next , .swiper-button-prev{
     --swiper-theme-color: #fff;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 40px;
 
 }
@@ -541,6 +541,6 @@ span a {
 svg{
     height: 30px;
     /* width: 10%; */
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 100px;
 }
